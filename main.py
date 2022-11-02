@@ -20,13 +20,16 @@ material = 'Material'
 
 # Th for IR filtration if you have IR movies
 tr_c = 0.8
-
+tr_stress = 0.1
+tr_temperature = 0.055
 
 fig, table= compare_all_exp(path = path, 
                             mat = material, 
                             IR = IR_path, 
                             sr = sample_rate, 
-                            th = tr_c)
+                            th = tr_c, 
+                            th_stress = tr_stress,
+                            th_temperature = tr_temperature)
 
 # write here any path you whant to save mechanical report 
 path = path

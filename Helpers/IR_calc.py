@@ -17,7 +17,7 @@ except:
     print('Sorry I installed TelopsToolbox in your PC, I really need it')
 
 
-def IR_calculation(way_to_file, stress, strain, exp_time, tr_c = 0.9, material = 'Material', specimen = 'Specimen'):
+def IR_calculation(way_to_file, stress, strain, exp_time, tr_c = 0.9, material = 'Material', specimen = 'Specimen', th_stress = 0.1, th_temperature = 0.055):
 
     """
        This function create the *.html in folder with *.hcc file
@@ -65,7 +65,7 @@ def IR_calculation(way_to_file, stress, strain, exp_time, tr_c = 0.9, material =
             temperature.append(0)
         time.append(ind/this_header[20])
 
-    temperature, ir_time, eq_strain = ct.cut_signal(strain, temperature, exp_time, time)
+    temperature, ir_time, eq_strain = ct.cut_signal(strain, temperature, exp_time, time, th_stress, th_temperature)
     temperature_data = pd.DataFrame({'Strain': eq_strain,
                                     'Temperature': temperature})
     temperature_data.to_csv(f'{way_to_file[:-4]}_data.csv')

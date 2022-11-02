@@ -5,7 +5,7 @@ import numpy as np
 from Helpers.IR_calc import IR_calculation
 
 
-def compare_all_exp(path, mat = 'Material', IR = False, sr = 2e6, th = 0.8):
+def compare_all_exp(path, mat = 'Material', IR = False, sr = 2e6, th = 0.8, th_stress = 0.1, th_temperature = 0.055):
 
     dir = os.listdir(path)
     exp = [item for item in dir if '#' in item.split()[-1]]
@@ -51,7 +51,10 @@ def compare_all_exp(path, mat = 'Material', IR = False, sr = 2e6, th = 0.8):
                         np.arange(0,(len(exp_data)-1)/sr, 1/sr),
                         tr_c = th,                                 # This is a parameter of IR movie filtration
                         material = mat,                      # This is a title of Material for the plot title
-                        specimen = item)                      # This is a title of Specimen for the plot title
+                        specimen = item,                      # This is a title of Specimen for the plot title
+                        th_stress = th_stress,
+                        th_temperature = th_temperature)
+
                     subplot.write_html(f'{IR}Specimen_{num}_Stress_and_temperature.html')
                 
 
