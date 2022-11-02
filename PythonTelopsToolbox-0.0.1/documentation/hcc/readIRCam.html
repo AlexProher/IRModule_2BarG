@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.7.2" />
+<title>TelopsToolbox.hcc.readIRCam API documentation</title>
+<meta name="description" content="" />
+<link href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css' rel='stylesheet'>
+<link href='https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/8.0.0/sanitize.min.css' rel='stylesheet'>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" rel="stylesheet">
+<style>.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{font-weight:bold}#index h4 + ul{margin-bottom:.6em}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>TelopsToolbox.hcc.readIRCam</code></h1>
+</header>
+<section id="section-intro">
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="TelopsToolbox.hcc.readIRCam.read_ircam"><code class="name flex">
+<span>def <span class="ident">read_ircam</span></span>(<span>file_name, peek=False, headers_only=False, frames=inf, rows=inf, pixels=inf, spassignment='max', bpassignment='median')</span>
+</code></dt>
+<dd>
+<section class="desc"><p>readIRCam Image sequence reader for Telops infrared camera files (.hcc)</p>
+<p>data, <em>, </em>, _ = read_ircam(filename, **kwargs) reads a single file, or a sequence of files, as output from Telops
+infrared cameras. Data is an array of frames containing pixel values along colums (<NFrames x NPixels>).</p>
+<p>data, header, _, _ = readIRCam(&hellip;) also reads image headers, each frame having its own header.</p>
+<p>To obtain a rectangular matrix of a frame for imaging purposes, one should reshape "Data" like this:
+data_im = np.reshape(data[i, :], (header["Width"][i], Header["Height"][i]);</p>
+<p><em>, </em>, SaturatedPixels, BadPixels] = readIRCam(&hellip;) enables to extract supplementary parameters about frame validity,
+and identification of saturated or bad pixels.</p>
+<p>&hellip; = readIRCam(file_name, param1=value1, param2=value2, &hellip;) allows to change certain default parameters</p>
+<p>Parameter name
+Value
+--------------
+-----
+'Peek'
+A logical value. If true, "Data" is replaced by the number of frames contained within the
+sequence "filename". When the sequence inculdes multiple files, "Data" returns a vector of the
+number of frames of each file. "Header" (if required) contains the header of the first frame of
+the sequence.
+The default value is false.</p>
+<p>'HeadersOnly'
+A logical value. If true, only the frame headers are read.
+The default value is false.</p>
+<p>'Frames'
+A Single non-negative integer value, or list of values, stating the specific frames that have to
+read. USAGE : frames=np.asarray([ list of indices of desired frames ])
+The default values is all frames.</p>
+<p>'Rows'
+A single non-negative integer value, or list of values, stating the specific rows that have to
+read. USAGE : rows=np.asarray([ list of indices of desired rows ])
+The default value is all rows.</p>
+<p>'SPAssignment'
+The method used to assign a value to each saturated pixel. The possible methods are: 'max',
+'median' and 'nan'.
+Only available for XML &gt;= 10.
+The default method is 'max'.</p>
+<p>'BPAssignment'
+The method used to assign a value to each bad pixel. The possible methods are: 'median' and
+'nan'.
+Only available for XML &gt;= 10.
+The default method is 'median'</p>
+<p>INPUT
+file_name : a string pointing to a single file or to a set of files with a common name (e.g.
+'path_to_file/filename.hcc' or 'path_to_file/commonname<em>.hcc'), it may also be a liste (or tuple) of
+strings (e.g. ['filename1.hcc', 'filename2</em>.hcc'])</p>
+<p>OUTPUT
+Data : pixel data
+- <NFrames, Width x Height> array by default
+- <NFrames, NRows x Height> array when specific 'Rows' are requested
+- empty array when only 'HeadersOnly' is requested
+Header : a dictionnary of arrays of size <Nframes x 1>. To access the element "ELEMENT" of the frame "i", you
+would type Header["ELEMENT"][i]
+specialPixelMap : Map of the special pixels with the corresponding code
+specialNonBadPixelMap : Map of the special pixel after bad pixel replacement
+The special pixel code are :
+LowerDigitalSaturation = 1;
+UpperDigitalSaturation = 2;
+SpecialTag3 = 3;
+SpecialTag4 = 4;
+SpecialTag5 = 5;
+SpecialTag6 = 6;
+SpecialTag7 = 7;
+SpecialTag8 = 8;
+SpecialTag9 = 9;
+BlankImageTranslation = 10;
+BadEmissivityCorrection = 11;
+UnderCalibrationRange = 12;
+OverCalibrationRange = 13;
+BadPixelTag = 14;
+% Code for bad pixel
+SaturatedPixelTag = 15;
+% Code for saturated pixel</p>
+<p>USAGE
+&hellip; = read_ircam(filename)
+# all frames, all rows</p>
+<pre><code>... = read_ircam(filename, headers_only=True)   # read headers only
+
+... = read_ircam(filename, headers_only=True, frames=list(range(XX, YY))  # headers only, frames xx to yy
+
+... = read_ircam(filename, frames=ii, rows=list(range(XX, YY))   # only frame ii, rows xx through yy
+
+... = read_ircam(filename, rows=xx)   # all frames, row xx only
+
+n, _, _, _ = readIRCam(filename, peek=True)   # number of frames in the sequence
+
+... = readIRCam(filename, spassignment='nan')   # all saturated pixels are assigned to 'nan'
+
+... = readIRCam(filename, bpassignment='nan')   # all bad pixels are assigned to 'nan'
+</code></pre>
+<p>Private parameters are:</p>
+<pre><code>Parameter name      Value
+--------------      -----
+'rows'              When the list of rows does not correspond to a set of complete and consecutive rows the
+                    'median' assignment methods are not possible, so they are forced to 'nan'.
+
+'pixels'            A single non-negative integer value, or list of values, stating the specific pixels that
+                    have to be read.
+                    When the list of pixels does not correspond to a set of complete and consecutive rows the
+                    'median' assignment methods are not possible, so they are forced to 'nan'.
+                    The default value is all pixels.
+                    Usage : ... = read_ircam(..., pixels=np.asarray([ list of pixels to read ]))
+
+'spassignment'      The method used to replace the saturated pixels. The possible private method is: 'no'.
+
+'bpassignment'      The method used to replace the bad pixels. The possible private method is 'no'.
+</code></pre>
+<p>Compagnie : Telops Inc.
+-----
+Registre de changements :
+----------------------------------------------------------------------------------
+Version
+Date
+Nom
+Commentaires
+0.0
+25 Jul 2019
+BTU
+Initial port of the matlab code
+0.1
+12 Mai 2020
+JTH
+Code cleanup and bug fixes</p>
+<p>Copyright Telops 2019</p></section>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3>Super-module</h3>
+<ul>
+<li><code><a title="TelopsToolbox.hcc" href="index.html">TelopsToolbox.hcc</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="TelopsToolbox.hcc.readIRCam.read_ircam" href="#TelopsToolbox.hcc.readIRCam.read_ircam">read_ircam</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc"><cite>pdoc</cite> 0.7.2</a>.</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>
